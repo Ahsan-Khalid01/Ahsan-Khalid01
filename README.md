@@ -9,9 +9,8 @@ Computer Science student Passionate about software development and intelligent s
 ###
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=c,java,html,css,mysql,git,github" height="60" />
+  <img src="https://skillicons.dev/icons?i=c,java,html,css,mysql,git,github,react,bootstrap" height="60" />
   <img width="12" />
-  <!-- Fixed Cisco Logo -->
   <img src="https://cdn.simpleicons.org/cisco" height="60" alt="cisco logo" />
 </div>
 
@@ -35,12 +34,19 @@ Computer Science student Passionate about software development and intelligent s
     <img src="https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&style=for-the-badge" height="25" />
   </a>
 
+  <a href="https://wa.me/923480244484" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white&style=for-the-badge" height="25" />
+  </a>
+
+  <a href="mailto:ahsankhalid0968@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white&style=for-the-badge" height="25" />
+  </a>
+
 </div>
 
 ###
 
 <div align="center">
-  <!-- IMPORTANT: Replace with your username -->
   <img src="https://streak-stats.demolab.com?user=Ahsan-Khalid01&theme=dracula&hide_border=false" height="150" />
   <img src="https://github-profile-trophy.vercel.app?username=Ahsan-Khalid01&theme=dracula&margin-w=8&margin-h=8" height="150" />
 </div>
