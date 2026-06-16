@@ -9,7 +9,7 @@ Computer Science student Passionate about software development and intelligent s
 ###
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=c,java,python,html,css,javascript,react,bootstrap,mysql,git,github,linux," height="60" />
+  <img src="https://skillicons.dev/icons?i=c,java,python,html,css,javascript,php,react,laravel,bootstrap,mysql,git,github,linux," height="60" />
   <img width="12" />
   <img src="https://cdn.simpleicons.org/cisco" height="60" alt="cisco logo" />
 </div>
