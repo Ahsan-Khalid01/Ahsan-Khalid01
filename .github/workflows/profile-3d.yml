@@ -17,10 +17,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: Ahsan-Khalid01
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: output
-          publish_dir: profile-3d-contrib
-          force_orphan: true
+      - run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add -A
+          cd profile-3d-contrib
+          git init
+          git checkout -b output
+          git add -A
+          git commit -m "Generate 3D contribution graph"
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Ahsan-Khalid01/Ahsan-Khalid01.git
+          git push origin output --force
