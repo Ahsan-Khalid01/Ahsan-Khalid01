@@ -31,3 +31,5 @@ jobs:
           publish_branch: output
           publish_dir: ./profile-3d-contrib
           keep_files: true
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
