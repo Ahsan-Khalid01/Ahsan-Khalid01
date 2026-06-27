@@ -1,30 +1,12 @@
-name: GitHub-Profile-3D-Contrib
+- name: Install dependencies
+        run: pip install requests cairosvg
 
-on:
-  schedule:
-    - cron: "0 18 * * *"
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Generate 3D SVG
+      - name: Generate 3D PNG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 << 'EOF'
-          import requests, json, os, math
+          import requests, os, cairosvg
 
           token = os.environ["GITHUB_TOKEN"]
           username = "Ahsan-Khalid01"
@@ -53,8 +35,6 @@ jobs:
 
           TW, TH = 14, 7
           BAR = 16
-          COLS = len(weeks)
-          ROWS = 7
           OX = 420
           OY = 60
           W = 860
@@ -77,8 +57,7 @@ jobs:
           for ci, week in enumerate(weeks):
               for ri, day in enumerate(week["contributionDays"]):
                   cnt = day["contributionCount"]
-                  v = min(4, 1 if cnt==0 else 2 if cnt<=2 else 3 if cnt<=5 else 4)
-                  if cnt == 0: v = 0
+                  v = 0 if cnt==0 else 1 if cnt<=1 else 2 if cnt<=3 else 3 if cnt<=6 else 4
                   cells.append((ci, ri, v))
 
           for ci, ri, v in reversed(cells):
@@ -87,10 +66,8 @@ jobs:
               col = colors[v]
               paths.append(f'<path d="{diamond(px,py,TW,TH)}" fill="{col}" stroke="#0d1117" stroke-width="0.8"/>')
               if v > 0:
-                  sl = side_l[v]
-                  sr = side_r[v]
-                  paths.append(f'<path d="M{px-TW},{py} L{px},{py+TH} L{px},{py+TH-bh} L{px-TW},{py-bh} Z" fill="{sl}" stroke="#0d1117" stroke-width="0.5"/>')
-                  paths.append(f'<path d="M{px},{py+TH} L{px+TW},{py} L{px+TW},{py-bh} L{px},{py+TH-bh} Z" fill="{sr}" stroke="#0d1117" stroke-width="0.5"/>')
+                  paths.append(f'<path d="M{px-TW},{py} L{px},{py+TH} L{px},{py+TH-bh} L{px-TW},{py-bh} Z" fill="{side_l[v]}" stroke="#0d1117" stroke-width="0.5"/>')
+                  paths.append(f'<path d="M{px},{py+TH} L{px+TW},{py} L{px+TW},{py-bh} L{px},{py+TH-bh} Z" fill="{side_r[v]}" stroke="#0d1117" stroke-width="0.5"/>')
                   paths.append(f'<path d="{diamond(px,py-bh,TW,TH)}" fill="{col}" stroke="#0d1117" stroke-width="0.5"/>')
 
           svg = f'''<svg width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg">
@@ -101,14 +78,8 @@ jobs:
           os.makedirs("profile-3d-contrib", exist_ok=True)
           with open("profile-3d-contrib/profile-night-green.svg", "w") as f:
               f.write(svg)
+          cairosvg.svg2png(url="profile-3d-contrib/profile-night-green.svg",
+                           write_to="profile-3d-contrib/profile-night-green.png",
+                           output_width=860)
           print("Done!")
           EOF
-
-      - uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: output
-          publish_dir: ./profile-3d-contrib
-          keep_files: true
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
