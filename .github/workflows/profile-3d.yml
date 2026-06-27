@@ -10,23 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: Ahsan-Khalid01
-          SETTING_JSON: |
-            {
-              "githubUserName": "Ahsan-Khalid01",
-              "startForegroundColor": "0d1117",
-              "endForegroundColor": "0d1117",
-              "backgroundColor": "0d1117",
-              "strongColor": "39d353",
-              "normalColor": "26a641",
-              "lightColor": "006d32",
-              "darkerColor": "0e4429"
-            }
-      - uses: crazy-max/ghaction-github-pages@v3
+      - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: profile-3d-contrib
