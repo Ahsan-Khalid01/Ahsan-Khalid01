@@ -48,6 +48,16 @@ Computer Science student passionate about software development and intelligent s
   <img src="https://github-profile-trophy.vercel.app?username=Ahsan-Khalid01&theme=dracula&margin-w=8&margin-h=8" height="150" />
 </div>
 
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ahsan-Khalid01/Ahsan-Khalid01/output/profile-night-green.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ahsan-Khalid01/Ahsan-Khalid01/output/profile-green-animate.svg">
+  <img src="https://raw.githubusercontent.com/Ahsan-Khalid01/Ahsan-Khalid01/output/profile-night-green.svg" width="100%" alt="3D Contribution Calendar"/>
+</picture>
+
+
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ahsan-Khalid01/Ahsan-Khalid01/output/pacman-contribution-graph-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ahsan-Khalid01/Ahsan-Khalid01/output/pacman-contribution-graph.svg">
