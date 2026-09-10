@@ -105,9 +105,7 @@
 <br>
 
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=Ahsan-Khalid01&theme=dracula&hide_border=false" height="150" />
-</div>
+
 
 <br>
 <picture>
