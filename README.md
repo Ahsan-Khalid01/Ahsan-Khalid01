@@ -114,12 +114,7 @@
   <img src="https://raw.githubusercontent.com/Ahsan-Khalid01/Ahsan-Khalid01/output/profile-night-green.svg" width="100%" alt="3D Contribution Calendar"/>
 </picture>
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Ahsan-Khalid01&show_icons=true&theme=dracula&hide_border=false&count_private=true" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ahsan-Khalid01&layout=compact&theme=dracula&hide_border=false" height="150" />
-</div>
 
-<br>
 
 
 
